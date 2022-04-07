@@ -1,12 +1,9 @@
-﻿using EmbASP4Unity.it.unical.mat.objectsMapper;
-using EmbASP4Unity.it.unical.mat.objectsMapper.ActuatorsScripts;
-using EmbASP4Unity.it.unical.mat.objectsMapper.Mappers;
-using EmbASP4Unity.it.unical.mat.objectsMapper.SensorsScripts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* old version code
+*  using EmbASP4Unity.it.unical.mat.objectsMapper;
+*  using EmbASP4Unity.it.unical.mat.objectsMapper.ActuatorsScripts;
+*  using EmbASP4Unity.it.unical.mat.objectsMapper.Mappers;
+*  using EmbASP4Unity.it.unical.mat.objectsMapper.SensorsScripts;
+*/
 using UnityEngine;
 
 namespace Assets.Game.Scripts
@@ -14,8 +11,10 @@ namespace Assets.Game.Scripts
     class Testing:MonoBehaviour
     {
         public SensorsManager sensorManager;
-        public ActuatorsManager actuatorManager;
-        public MappingManager mappingManager;
+        /* old version code
+        * public ActuatorsManager actuatorManager;
+        * public MappingManager mappingManager;
+        */
         public int toUpdate;
 
         void OnEnable()

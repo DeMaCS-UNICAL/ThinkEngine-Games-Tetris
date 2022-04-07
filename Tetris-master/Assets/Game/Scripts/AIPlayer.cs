@@ -1,12 +1,4 @@
-﻿using EmbASP4Unity.it.unical.mat.objectsMapper.ActuatorsScripts;
-using EmbASP4Unity.it.unical.mat.objectsMapper.BrainsScripts;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -25,7 +17,7 @@ namespace Assets.Scripts
         int currentTetromino;
         public int aiProgressive;
         public bool moveDone;
-        Brain brain;
+        ReactiveBrain brain;
         TetrominoSpawner spawner;
 
         void Start()
@@ -33,7 +25,7 @@ namespace Assets.Scripts
             moveDone = true;
             start = Vector3.zero;
             end = Vector3.zero;
-            brain = GameObject.FindObjectOfType<Brain>();
+            brain = GameObject.FindObjectOfType<ReactiveBrain>();
             Debug.Log(brain);
             spawner = GameObject.FindObjectOfType<TetrominoSpawner>();
             //StartCoroutine("move");

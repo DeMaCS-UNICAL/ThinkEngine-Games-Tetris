@@ -4,28 +4,11 @@ using UnityEngine;
 
 //every method of this class returning a bool value can be used to trigger the sensors update.
 public class Trigger:ScriptableObject{
-    private int tetrominoProgr;
-    private TetrominoSpawner spawner;
-    private AIPlayer player;
-
-    void Awake()
-    {
-        tetrominoProgr = 0;
-        spawner = GameObject.FindObjectOfType<TetrominoSpawner>();
-        player = GameObject.FindObjectOfType<AIPlayer>();
-    }
-    public bool spawned()
-    {
-        if (spawner.progressiveNumber != tetrominoProgr)
-        {
-            tetrominoProgr = spawner.progressiveNumber;
-            Debug.Log("returning true");
-            return true;
-        }
-        return false;
-    }
+    
     public bool applyActuatorsForAIPlayer()
     {
+        TetrominoSpawner spawner = GameObject.FindObjectOfType<TetrominoSpawner>();
+        AIPlayer player = GameObject.FindObjectOfType<AIPlayer>();
         Debug.Log("check if to apply");
         return player.currentProgressive != player.aiProgressive;
     }
