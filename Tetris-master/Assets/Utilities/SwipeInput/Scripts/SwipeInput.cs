@@ -1,6 +1,4 @@
 ﻿using Assets.Scripts;
-using EmbASP4Unity.it.unical.mat.objectsMapper.BrainsScripts;
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -28,7 +26,7 @@ public class SwipeInput : MonoBehaviour {
             Debug.Log("Start swipe detection for mouse input");
             StartCoroutine(swipeDetectionMouse());
         }*/
-        if (GameObject.FindObjectOfType<Brain>().enableBrain)
+        if (GameObject.FindObjectOfType<ReactiveBrain>().enableBrain)
         {
             StartCoroutine(detectAIMove());
         }
